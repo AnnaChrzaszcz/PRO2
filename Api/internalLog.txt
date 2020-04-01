@@ -1,0 +1,32 @@
+2020-03-30 20:40:09.3529 Info Message Template Auto Format enabled
+2020-03-30 20:40:09.4589 Info Loading assembly: NLog.Web.AspNetCore
+2020-03-30 20:40:09.7148 Info Adding target FileTarget(Name=alldata)
+2020-03-30 20:40:10.2325 Info Adding target FileTarget(Name=otherFile-web)
+2020-03-30 20:40:10.2960 Info Adding target DatabaseTarget(Name=database)
+2020-03-30 20:40:10.4983 Info Found 78 configuration items
+2020-03-30 20:40:10.5912 Error DatabaseTarget(Name=database): Failed to create ConnectionType from DBProvider=sqlserver Exception: System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'. Nie można odnaleźć określonego pliku.
+File name: 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at NLog.Targets.DatabaseTarget.SetConnectionType()
+   at NLog.Targets.DatabaseTarget.InitializeTarget()
+
+
+2020-03-30 20:40:10.8752 Error Database Target[database]: Error initializing target Exception: System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'. Nie można odnaleźć określonego pliku.
+File name: 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at NLog.Targets.DatabaseTarget.SetConnectionType()
+   at NLog.Targets.DatabaseTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+
+
+2020-03-30 20:40:11.4412 Info Shutdown() called. Logger closing...
+2020-03-30 20:40:12.3915 Info Closing old configuration.
+2020-03-30 20:40:12.5812 Info Logger has been closed down.
+2020-03-30 20:40:12.6012 Info AppDomain Shutting down. Logger closing...
+2020-03-30 20:40:12.6012 Info Logger has been shut down.
